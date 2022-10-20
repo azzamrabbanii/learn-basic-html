@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Sidebar</title>
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../stylecss/sidebar.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <a id="btn-menu" href="#">
+                <<
+            </a>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-title"><b>Gal</b>lery</div>
+            <ul>
+                <li><a href="#">Album 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+                <li><a href="#">Menu 4</a></li>
+                <li><a href="#">Menu 5</a></li>
+                <li><a href="#">Menu 6</a></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h4>Wimpy Kid</h4>
+            <img src="../pp.jpg" data-aos="zoom-in-right" data-aos-duration="3000" alt="foto pp" width="200px" height="200px">
+            <p>Diary of a Wimpy Kid is an American children’s book series and media franchise created by author and cartoonist Jeff Kinney. The series follows Greg Heffley, a middle-schooler who illustrates his daily life in a diary. Kinney spent 8 years working on the book before showing it to a publisher.</p>
+            <button id="container1" type="button" style="background-color: pink;" class="animate__animated">subcribe</button>
+            <br>
+            <h4>pirates of the caribbean</h4>
+            <img src="../pp.jpg" data-aos="zoom-in-left" data-aos-duration="3000" alt="foto pp" width="200px" height="200px">
+            <p>Pirates of the Caribbean is an American fantasy swashbuckler film series produced by Jerry Bruckheimer and based on Walt Disney's theme park attraction of the same name. The film series serves as a major component of the eponymous media franchise.</p>
+            <br>
+            <h4>Lorem Ipsum 3</h4>
+            <img src="../pp.jpg" data-aos="zoom-in" data-aos-duration="3000" alt="foto pp" width="200px" height="200px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, iure doloribus nam vitae, aliquid tempora necessitatibus labore amet aperiam fugiat libero fuga eligendi nulla est voluptas nemo excepturi deserunt? Distinctio.</p>
+            <br>
+            <h4>Lorem Ipsum 4</h4>
+            <img src="../pp.jpg" data-aos="zoom-out-down" data-aos-duration="3000" alt="foto pp" width="200px" height="200px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, iure doloribus nam vitae, aliquid tempora necessitatibus labore amet aperiam fugiat libero fuga eligendi nulla est voluptas nemo excepturi deserunt? Distinctio.</p>
+            <br>
+            <h4>Lorem Ipsum 5</h4>
+            <img src="../pp.jpg" data-aos="flip-left" data-aos-duration="3000" alt="foto pp" width="200px" height="200px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, iure doloribus nam vitae, aliquid tempora necessitatibus labore amet aperiam fugiat libero fuga eligendi nulla est voluptas nemo excepturi deserunt? Distinctio.</p>
+            <br>
+            <h4>Lorem Ipsum 6</h4>
+            <img src="../pp.jpg" data-aos="zoom-in" data-aos-duration="3000" alt="foto pp" width="200px" height="200px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, iure doloribus nam vitae, aliquid tempora necessitatibus labore amet aperiam fugiat libero fuga eligendi nulla est voluptas nemo excepturi deserunt? Distinctio.</p>
+            <br>
+        </div>
+    </div>
+    <footer>
+        <h5>Copyright &copy; by Muhammad Azzam</h5>
+        <i class='bx bxs-envelope'></i>
+        <i class='bx bxl-instagram-alt'></i>
+        <i class='bx bxl-linkedin-square'></i>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn-menu").click(function(){
+                $(".header").toggleClass('slideheader');
+                $(".sidebar").toggleClass('slidesidebar');
+                $(".section").toggleClass('slidesection');
+            });
+        })
+
+        var container1 = document.getElementById("container1");
+        container1.addEventListener("click", function(event){
+           event.target.classList.add('animate__bounce');
+        });
+
+        AOS.init();
+    </script>
+</body>
+</html>
